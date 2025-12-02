@@ -1,0 +1,207 @@
+<!-- <!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Performance Predictor</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="title">🎓 Student Performance Predictor</h1>
+
+    <form id="predictForm" method="POST" class="form-card">
+
+      <div class="form-grid">
+
+        <label>Gender
+          <select name="Gender" required>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select>
+        </label>
+
+        <label>Ethnicity
+          <input name="Ethnicity" type="number" value="0" required>
+        </label>
+
+        <label>Parental Education
+          <input name="ParentalEducation" type="number" value="0" required>
+        </label>
+
+        <label>Study Time Weekly
+          <input name="StudyTimeWeekly" type="number" step="0.1" value="5" required>
+        </label>
+
+        <label>Absences
+          <input name="Absences" type="number" value="0" required>
+        </label>
+
+        <label>Tutoring
+          <select name="Tutoring">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Parental Support
+          <select name="ParentalSupport">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Extracurricular
+          <select name="Extracurricular">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Sports
+          <select name="Sports">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Music
+          <select name="Music">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Volunteering
+          <select name="Volunteering">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>GPA
+          <input name="GPA" type="number" step="0.01" value="3.00" required>
+        </label>
+
+      </div>
+
+      <button type="submit" class="submit-btn">Predict Grade</button>
+    </form>
+
+    {% if prediction is not none %}
+      <div class="prediction-box">
+        <h2>Predicted Grade: <span>{{ prediction }}</span></h2>
+      </div>
+    {% endif %}
+
+  </div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Performance Predictor</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="title">🎓 Student Performance Predictor</h1>
+
+    FIXED: Added action="/predict" method="POST"
+    <form id="predictForm" action="/predict" method="POST" class="form-card">
+
+      <div class="form-grid">
+
+        <label>Gender
+          <select name="Gender" required>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select>
+        </label>
+
+        <label>Ethnicity
+          <input name="Ethnicity" type="number" value="0" required>
+        </label>
+
+        <label>Parental Education
+          <input name="ParentalEducation" type="number" value="0" required>
+        </label>
+
+        <label>Study Time Weekly
+          <input name="StudyTimeWeekly" type="number" step="0.1" value="5" required>
+        </label>
+
+        <label>Absences
+          <input name="Absences" type="number" value="0" required>
+        </label>
+
+        <label>Tutoring
+          <select name="Tutoring">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Parental Support
+          <select name="ParentalSupport">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Extracurricular
+          <select name="Extracurricular">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Sports
+          <select name="Sports">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Music
+          <select name="Music">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>Volunteering
+          <select name="Volunteering">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+
+        <label>GPA
+          <input name="GPA" type="number" step="0.01" value="3.00" required>
+        </label>
+
+      </div>
+
+      <button type="submit" class="submit-btn">Predict Grade</button>
+    </form>
+
+    {% if prediction is not none %}
+      <div class="prediction-box">
+        <h2>Predicted Grade: <span>{{ prediction }}</span></h2>
+      </div>
+    {% endif %}
+
+  </div>
+
+</body>
+</html> 
